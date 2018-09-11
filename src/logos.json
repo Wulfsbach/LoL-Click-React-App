@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "100 Thieves",
+        "image": "/images/100T.png"
+    },
+    {
+        "id": 2,
+        "name": "Cloud9",
+        "image": "/images/c9.png"
+    },
+    {
+        "id": 3,
+        "name": "Clutch Gaming",
+        "image": "/images/clutch.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Counter Logic Gaming",
+        "image": "/images/clg.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Echo Fox",
+        "image": "/images/EchoFox.jpg"
+    },
+    {
+        "id": 6,
+        "name": "FlyQuest",
+        "image": "/images/FlyQuet.png"
+    },
+    {
+        "id": 7,
+        "name": "Golden Guardians",
+        "image": "/images/GoldenGuardians.png"
+    },
+    {
+        "id": 8,
+        "name": "OpTic Gaming",
+        "image": "/images/Optic.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Team Liquid",
+        "image": "/images/TeamLiquid.png"
+    },
+    {
+        "id": 10,
+        "name":"Team SoloMid",
+        "image":"/images/TSM.jpg"
+    }
+]
