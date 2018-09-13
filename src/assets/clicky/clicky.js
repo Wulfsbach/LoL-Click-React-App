@@ -50,6 +50,17 @@ Checker(a) {
     });
     return check;
 }
-
-
+guessHandler = (current) => {
+    let check = this.Checker(current);
+    if(check) {
+        this.shuffle();
+        let array = this.state.guessed.slice();
+        array.push(current);
+        this.setState({logos: logos, guessed: array})
+        }else if (!check){
+            this.End();
+        }
+    }
 }
+
+
