@@ -9,7 +9,7 @@ import "./clicky.css";
 
 
 
-class logosGrid extends Component {
+class Grid extends Component {
     constructor(props) {
         super(props);
 
@@ -58,10 +58,10 @@ guessHandler = (current) => {
     render() {
         return (
             <div className="container">
-            <logosGrid />
             </div>
         )
     }
 }
 
 
+export default Grid;
