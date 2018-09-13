@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import logos from "../../logos.json";
 import "./clicky.css";
-
+import Logospace from "../LogoSpace";
 
 
    
@@ -42,7 +42,7 @@ Checker(a) {
             choice = false;
         }
     });
-    return check;
+    return choice;
 }
 guessHandler = (current) => {
     let check = this.Checker(current);
@@ -58,6 +58,23 @@ guessHandler = (current) => {
     render() {
         return (
             <div className="container">
+            <div className="GameSpace">
+
+            {this.state.logos.map(logo => (
+
+            <Logospace
+            image={logo.image}
+            key={logo.id}
+            id={logo.id}
+            name={logo.name}
+            guessHandler = {this.guessHandler}
+        
+            />))}
+        
+
+
+</div>
+
             </div>
         )
     }

@@ -1,5 +1,7 @@
 import React from 'react';
-import clicky from './assets/clicky/clicky';
+import Clicky from './assets/Clicky/clicky';
 
 
-const App = () => <div> <clicky />; </div>
+const App = () => <div> <Clicky /> </div>
+
+export default App;

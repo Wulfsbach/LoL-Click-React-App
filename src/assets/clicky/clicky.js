@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import logos from "../../logos.json";
 import "./clicky.css";
-
+import Logospace from "../LogoSpace";
 
 
    
@@ -9,7 +9,7 @@ import "./clicky.css";
 
 
 
-class logosGrid extends Component {
+class Grid extends Component {
     constructor(props) {
         super(props);
 
@@ -42,7 +42,7 @@ Checker(a) {
             choice = false;
         }
     });
-    return check;
+    return choice;
 }
 guessHandler = (current) => {
     let check = this.Checker(current);
@@ -58,10 +58,27 @@ guessHandler = (current) => {
     render() {
         return (
             <div className="container">
-            <logosGrid />
+            <div className="GameSpace">
+
+            {this.state.logos.map(logo => (
+
+            <Logospace
+            image={logo.image}
+            key={logo.id}
+            id={logo.id}
+            name={logo.name}
+            guessHandler = {this.guessHandler}
+        
+            />))}
+        
+
+
+</div>
+
             </div>
         )
     }
 }
 
 
+export default Grid;
