@@ -1,0 +1,18 @@
+.logos {
+    width:50%;
+  display: inline;
+  
+}
+.logos img {
+    width: 20%;
+    height: 20%;
+    padding:1%;
+
+    border-color: green;
+    border-style: solid;
+    border-width: 5px;
+
+    
+    
+   
+}
