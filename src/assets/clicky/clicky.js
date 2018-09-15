@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import logos from "../../logos.json";
 import "./clicky.css";
 import Logospace from "../LogoSpace";
-
+import Navbar from "../Navbar";
 
    
 
@@ -16,7 +16,8 @@ class Grid extends Component {
         this.state ={
             logos: logos,
             guessed: [],
-            highscore:0
+            highscore:0,
+            currentScore:0
 
         };
     }
@@ -28,17 +29,17 @@ for (let i = 0; i<this.state.logos.length;i++){
     }
 
 End() {
-    if (this.state.highscore >= 10) {
-        this.setState({highscore: this.state.logos, logos:logos, guessed:[]});
+    if (this.state.currentScore > this.state.highscore) {
+        this.setState({highscore: this.state.currentScore,currentScore: 0, logos:logos, guessed:[]});
     }else {
-        this.setState({logos:logos, guessed:[]});
+        this.setState({currentScore: 0,logos:logos, guessed:[]});
     }
 }
 
 Checker(a) { 
     let choice= true;
     this.state.guessed.forEach((guess) => {
-        if (choice === guess) {
+        if (a === guess) {
             choice = false;
         }
     });
@@ -50,14 +51,20 @@ guessHandler = (current) => {
         this.shuffle();
         let array = this.state.guessed.slice();
         array.push(current);
-        this.setState({logos: logos, guessed: array})
+        let currentScore= this.state.currentScore +1;
+        this.setState({logos: logos,currentScore: currentScore, guessed: array})
         }else if (!check){
             this.End();
         }
     }
     render() {
         return (
+           
             <div className="container">
+             <Navbar
+            currentScore={this.state.currentScore}
+            highscore={this.state.highscore}
+            />
             <div className="GameSpace">
 
             {this.state.logos.map(logo => (

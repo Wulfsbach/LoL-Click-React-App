@@ -1,8 +1,8 @@
 import React from 'react';
 import Clicky from './assets/Clicky/clicky';
-import Navbar from './assets/navbar/navbar';
+import Heading from './assets/Heading/heading';
 
 
-const App = () => <div> <Navbar /> <Clicky /> </div>
+const App = () => <div> <Heading /> <Clicky /> </div>
 
 export default App;
