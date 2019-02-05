@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import logos from "../../logos.json";
 import "./clicky.css";
 import Logospace from "../LogoSpace";
-import Navbar from "../Navbar";
+import Navbar from "../navbar";
 
    
 
