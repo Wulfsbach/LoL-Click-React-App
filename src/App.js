@@ -1,5 +1,5 @@
 import React from 'react';
-import Clicky from './assets/Clicky/clicky';
+import Clicky from './assets/clicky/clicky';
 import Heading from './assets/Heading/heading';
 
 
